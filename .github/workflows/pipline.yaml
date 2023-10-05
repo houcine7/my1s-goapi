@@ -27,7 +27,7 @@ jobs:
           go version
           go get -u golang.org/x/lint/golint # to update the golint tool for code linting
       - name: Running build
-        run: go build .
+        run: cd ./cmd/api && go build .
       - name: Linting&errors checks
         run: |
           go vet ./... # check all files in the project for issues related to correctness such as potential errors or unintended behaviors
