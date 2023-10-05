@@ -13,7 +13,7 @@ import (
 // get the coin balance of a user
 func GetCoinBalance(writer http.ResponseWriter, req *http.Request){
 	var params =api.CoinsBalanceParams{}
-	var decoder *schema.Decoder= schema.NewDecoder()
+	var decoder *schema.Decoder= schema.NewDecoder() // comments 
 	var err error 
 
 	err = decoder.Decode(&params, req.URL.Query())
