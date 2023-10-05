@@ -8,7 +8,7 @@ import (
 
 
 func Handler(router *chi.Mux){
-	router.Use(chiMiddleware.StripSlashes) // this will remove any trailing slashes from the URL (trailing: are the ones at the end of the URL)
+	router.Use(chiMiddleware.StripSlashes) // this will remove any trailing slashes from the URL
 
 	router.Route("/api/v1/account", func(router chi.Router){
 		router.Use(middleware.Authorization)

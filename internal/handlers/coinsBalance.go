@@ -10,6 +10,7 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
+// get the coin balance of a user
 func GetCoinBalance(writer http.ResponseWriter, req *http.Request){
 	var params =api.CoinsBalanceParams{}
 	var decoder *schema.Decoder= schema.NewDecoder()
